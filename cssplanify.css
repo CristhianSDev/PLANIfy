@@ -1,0 +1,352 @@
+*{
+    border: 0;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.conteudo-principal{
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    gap: 20px;
+    padding: 20px;
+}
+
+#logo-da-pagina h1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    cursor: pointer;
+    background-image: url("imagemdefundo.jpg");
+    text-shadow: black;
+    font-size: 30px;
+    font-family: "Kavoon", serif;
+}
+/*.meses h1{
+    color: black;
+    margin-left: 70px;
+    margin-top: 30px;
+
+}*/
+.container{
+    max-width: 520px;
+    margin: 30px auto;
+    padding: 20px;
+    background-color: #F29325;
+    border-radius: 10px;
+    font-family: "Lilita One", sans-serif;
+    margin-right: 100px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1)
+}
+
+h1{
+    text-align: center;
+    color: #fff;
+    font-size: 26px;
+}
+
+input{
+    width: 97%;
+    padding: 8px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+button{
+    padding: 8px 16px;
+    font-size: 16px;
+    background-color: #f08000;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+ul{
+    list-style-type: none;
+    padding: 0;
+}
+
+.task-item{
+    padding: 10px;
+    background-color:  #f08000;
+    margin-bottom: 5px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    color: #fff;
+}
+
+li span{
+    flex: 1;
+    text-align: left;
+}
+
+li.editButton
+li.deleteButton
+{
+    margin-left: 5px;
+}
+
+button:hover{
+    background-color: #ca7718;
+}
+
+#back-page{
+    margin-left: 10px;
+    border-radius: 47%;
+}
+
+
+
+/* criação do calendario */
+
+.calendario-tarefas{
+    position: static;
+    margin: 0 0 0 -250px;
+    width: 500px;
+    left: 50%;
+    font-family: 'Lilita One', sans-serif;
+    margin-left: 100px;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+    background-color: white;
+}
+.calendario{
+    text-align: center;
+    border-radius: 15px; 
+    overflow: hidden;
+}
+.calendario-tarefas .calendario {
+    border-radius: 15px;
+}
+.calendario-tarefas .calendario header{
+    position: relative;
+}
+.mes-calendario{
+    margin-top: 20px;
+    font-size: 30px;
+    text-transform: uppercase;
+}
+.btn-ant,.btn-pro{
+    position: absolute;
+    top: 50%;
+    height: 32px;
+    width: 32px;
+    line-height: 32px;
+    margin-top: -16px;
+    border: 2px solid #cbd1d2;
+    border-radius: 50%;
+    color: #cbd1d2;
+    font-size: 16px;
+    font-weight: bold;
+}
+.btn-ant{
+    left: 80px;
+}
+.btn-pro{
+    right: 80px;
+}
+.btn-ant:hover, .btn-pro:hover{
+    background: #cbd1d2;
+    color: #f9f9f9 ;
+}
+.calendario table{
+    margin-top: 20px;
+    border-collapse: collapse; 
+    overflow: hidden; 
+    background-color: white;
+}
+.calendario thead{
+    background: white;
+    font: 600;
+    text-transform: uppercase;
+    border-bottom: 5px solid #DB4F04;
+}
+.calendario thead th { border: 1px solid #cbd1d2;
+    padding: 10px; 
+    background-color: white;  
+    border-radius: 0; 
+}
+.calendario td{
+    border: 1px solid #cbd1d2;
+    height: 71.4px;
+    text-align: center;
+    width: 71.4px;
+    border-radius: 0px;
+    background-color: white;    
+}
+.calendario tbody td{
+    cursor: pointer;
+}
+.calendario tbody td:hover{
+    background: #DB4F04;
+    color: #f9f9f9;
+}
+.calendario table .dia-atual{
+    background: #DB4F04;
+    color: white;
+}
+.calendario .mes-anterior, .calendario .proximo-mes{
+    color: #98a0a0;
+}
+.calendario .mes-anterior:hover , .calendario .proximo-mes:hover{
+    background: #98a0a0;
+}
+.event{
+    position: relative;
+}
+.event:after{
+    content: '';
+    width: 7px;
+    height: 7px;
+    left: 50%;
+    bottom: 7px;
+    margin: -3.5px 0 0 -3.5px;
+    background: #413AAC;
+    display: block;
+    position: absolute;
+    border-radius: 50%;
+}
+.event:hover::after{
+    background: #F0BD3E;
+}
+.event.dia-atual:after{
+    background: #F0BD3E ;
+}
+
+/* Estilização da seleção da cor para o dia*/
+
+.marcado {
+    background-color: #ffd467 !important; /* Cor padrão */
+    color: white;
+}
+.marcado-verde {
+    background-color: #a6ff8b !important;
+    color: white;
+}
+.marcado-azul {
+    background-color: #68afff !important;
+    color: white;
+}
+.marcado-vermelho {
+    background-color: rgb(255, 101, 101) !important;
+    color:white
+}
+.azul{
+    font-family: 'Lilita One', sans-serif;
+    background-color: #68afff;
+    color: white;
+    font-size: 24px;
+}
+.vermelho{
+    font-family: 'Lilita One', sans-serif;
+    background-color: rgb(255, 101, 101);
+    color: white;
+    font-size: 24px;
+}
+.amarelo{
+    font-family: 'Lilita One', sans-serif;
+    background-color: #ffd467;
+    color: white;
+    font-size: 24px;
+}
+.verde{
+    font-family: 'Lilita One', sans-serif;
+    background-color: #a6ff8b;
+    color: white;
+    font-size: 24px;
+}
+
+/* Estilização do Rodapé */
+.rodape { 
+    display: flex; 
+    justify-content: space-between; 
+    align-items: flex-start; 
+    background: black; 
+    width: 100%; 
+    height: 230px; 
+    color: white; 
+    padding: 20px; 
+} 
+.sobre-nos { 
+    flex: 1; 
+    margin-right: 10px;
+    margin-left: 70px;
+    margin-top: 7px; /* Espaçamento à direita para separar das links */ 
+} 
+.sobre-nos h2 { 
+    font-family: "Kanit", sans-serif; 
+    margin-bottom: 10px;
+    font-size: 28px;
+} 
+.linha{
+    width: 55px;
+    background: #DB4F04;
+    height: 1px;
+}
+.sobre-nos p { 
+    font-family: "Roboto Condensed", sans-serif; 
+    font-size: 18px; 
+    margin-top: 15px;
+} 
+.links { 
+    flex: 1; 
+    display: flex; 
+    flex-direction: column; 
+    align-items: flex-start; /* Alinha o conteúdo à direita */ 
+    margin-right: 15%;
+    margin-left: 340px;
+} 
+.links-title { 
+    font-family: "Kanit", sans-serif; 
+    font-size: 28px; 
+    margin-bottom: 10px; 
+} 
+.links a { 
+    text-decoration: none; 
+    color: white; 
+    font-size: 15px; 
+    margin-top: 15px;
+    font-size: 18px;
+    font-family: "Roboto Condensed", sans-serif; 
+}
+.links img{
+    width: 150px;
+    height: 150px;
+    margin-left: 200px;
+}
+.rodape h6{
+    margin-top: 15%;
+    margin-right: 10%;
+    background-color: black;
+    font-family: "Roboto Condensed", sans-serif; 
+}
+
+ /* Estilização dos ícones */ 
+
+.fab.fa-instagram { 
+    color: white; /* Cor do Instagram */ 
+    font-size: 24px; 
+    margin-right: 8px; /* Espaçamento à direita do ícone */ 
+}
+.fab.fa-twitter {
+    color: white; /* Cor do Twitter */
+    font-size: 24px; /* Tamanho do ícone */
+    margin-right: 8px;
+}
+.fas.fa-phone {
+    color: white; /* Cor do ícone */
+    font-size: 24px;
+    margin-right: 8px; /* Tamanho do ícone */
+}

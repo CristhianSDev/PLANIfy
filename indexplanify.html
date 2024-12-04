@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PLANIfy</title>
+    <script src="calendario.jsf"></script>
+    <link rel="stylesheet" href="cssplanify.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lilita+One&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kavoon&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" type="imagex/png" href="Logo-tcc-removebg-preview.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <!-- Logo do Site -->
+    <header id="logo-da-pagina">
+        <h1>PLANIfy</h1>
+    </header>
+
+    <button type="back" id="back-page"><a href="login.html"><img src="seta-esquerda.png" alt="seta para voltar" width="30px" height="35px"></a></button>
+    <h1 id="mensagem"></h1>
+    <main class="conteudo-principal">
+
+        <!-- Criação dp Calendario -->
+        <div class="calendario-tarefas">
+            <div class="calendario">
+                <header>
+                    <h2 id="mes" class="mes-calendario">novembro</h2>   
+                    <a class="btn-ant" id="btn_ant"><</a>
+                    <a class="btn-pro" id="btn_prev">></a>
+                </header>
+                <h2 id="ano"></h2>
+                <!-- escolha das cores do dia seleciona-->
+                <select id="colorPicker" aria-placeholder="Escolha a Cor do Dia...">
+                    <option value="marcado" class="amarelo">Amarelo</option> 
+                    <option value="marcado-verde" class="verde">Verde</option> 
+                    <option value="marcado-azul" class="azul">Azul</option> 
+                    <option value="marcado-vermelho" class="vermelho">Vermelho</option>
+                </select>
+                <table>
+                    <thead>
+                        <tr>
+                            <td>Dom</td>
+                            <td>Seg</td>
+                            <td>ter</td>
+                            <td>Qua</td>
+                            <td>Qui</td>
+                            <td>Sex</td>
+                            <td>Sab</td>
+                        </tr>
+                    </thead>
+                    <tbody id="dias">
+                        <tr>
+                            <td>1</td>
+                            <td>2</td>
+                            <td>3</td>
+                            <td>4</td>
+                            <td>5</td>
+                            <td>6</td>
+                            <td>7</td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>2</td>
+                            <td>3</td>
+                            <td>4</td>
+                            <td>5</td>
+                            <td>6</td>
+                            <td>7</td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>2</td>
+                            <td>3</td>
+                            <td>4</td>
+                            <td>5</td>
+                            <td>6</td>
+                            <td>7</td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>2</td>
+                            <td>3</td>
+                            <td>4</td>
+                            <td>5</td>
+                            <td>6</td>
+                            <td>7</td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>2</td>
+                            <td>3</td>
+                            <td>4</td>
+                            <td>5</td>
+                            <td>6</td>
+                            <td>7</td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>2</td>
+                            <td>3</td>
+                            <td>4</td>
+                            <td>5</td>
+                            <td>6</td>
+                            <td>7</td>
+                        </tr>
+                    </tbody>
+                </table>
+                
+            </div>
+        </div>
+
+        <!-- Abaixo esta a base para a criação da lista de Tarefas-->
+        <div class="container">
+            <h1>O QUE VOU FAZER HOJE?</h1>
+                <input type="text" id="taskInput" placeholder="O que tenho que fazer ...">
+                    <button onclick="addTask()">Adicionar</button>
+            <ul id="taskList"></ul>
+        </div>
+    </main>
+
+    <!-- criação da base do rodape -->
+
+    <footer class="rodape"> 
+        <div class="sobre-nos"> 
+            <h2>Sobre Nós</h2> 
+            <section class="linha"></section>
+            <p>O PLANify tem o intuito de ajudar o seu usuário a se organizar/otimizar sua rotina e vida com inteligência e de forma efetiva.</p> 
+        </div> 
+        <div class="links"> 
+            <h2 class="links-title">Links</h2> 
+            <section class="linha"></section>
+                <a href="https://www.instagram.com/planify__/" target="_blank"> 
+                <i class="fab fa-instagram"></i> Instagram </a> 
+                <a href="https://x.com/PlanifyTcc" target="_blank">
+                <i class="fab fa-twitter"></i>  Twitter </a>
+                <a href="https://contate.me/cristhianplanify" target="_blank">
+                <i class="fas fa-phone"> </i> Contato </a>
+        </div>  
+    <h6>PLANIfy Copyright &copy; 2024.</h6>
+    </footer>
+
+    <!-- inserção dos scripts na pagina -->
+
+    <script src="jsplanify.js"></script>    
+    <script src="calendario.js"></script>
+</body>
+</html>

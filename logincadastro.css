@@ -1,0 +1,56 @@
+*{
+    margin: 0;
+    border: 0;
+}
+header h1{
+    color: white;
+    background-image: url("imagemdefundo.jpg");
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 100;
+    cursor: pointer;
+    font-family: "Kavoon", serif;
+    font-style: normal;
+}
+#cadastro-login{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 50px;
+}
+#cadastro-login img{
+    width: 200px;
+    height: 200px;
+    margin-top: 10px;
+    border-radius: 15px;
+}
+#cadastro-login button{
+    width: 239px;
+    height: 57px;
+    margin-top: 30px;
+    background-color: #025259;
+    color: white;
+    font-size: 22px;
+    border-radius: 15px;
+}
+#cadastro-login button a {
+    text-decoration: none;
+    color: white;
+}
+footer{
+    display: flex;
+    margin-top: 50px;
+    position: relative;
+    justify-content: center;
+    padding-bottom: 0;
+    margin-bottom: 0;
+}
+
+/* Estilização e animação dos botões */
+
+#cadastro-login button:hover{
+    background-color: #007172;
+    cursor: pointer;
+}
